@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Abouts on Boaz Sobrado</title>
+    <link>http://localhost:1313/about/</link>
+    <description>Recent content in Abouts on Boaz Sobrado</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/about/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Resources</title>
+      <link>http://localhost:1313/about/intro/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/about/intro/</guid>
+      <description>&lt;section id=&#34;home-left&#34;&gt;
+  &lt;h6&gt;WRITING AND PRESENTING SOCIAL SCIENCE&lt;/h6&gt;
+
+&lt;p&gt;This page has links to configuration files, templates, and a few other things that might be of use to people who want to write nicely-formatted social science papers in plain text, with data, figures, and references. I wrote an &lt;a href=&#34;blog/archives/2014/01/23/plain-text/&#34;&gt;introductory guide to the material here&lt;/a&gt; that might be useful for getting oriented.&lt;/p&gt;
+&lt;/section&gt;
+
+&lt;section id=&#34;home-right&#34;&gt;
+  &lt;h2&gt;&amp;nbsp;&lt;/h2&gt;
+&lt;p&gt;&lt;img class=&#34;fpimg&#34; src=&#34;http://kieranhealy.org/files/misc/workflow-wide.png&#34; width=&#34;400&#34;&gt; &lt;/p&gt;
+&lt;/section&gt;
+
+&lt;section style=&#34;clear:both;&#34;&gt;&lt;/section&gt;
+
+&lt;section id=&#34;home-left&#34;&gt;
+  &lt;h2&gt;&lt;a href=&#34;http://www.kieranhealy.org/files/misc/workflow-apps.pdf&#34;&gt;Choosing Your Workflow Applications&lt;/a&gt; &amp;rarr;&lt;/h2&gt;
+  &lt;section&gt;
+    &lt;p&gt;A short discussion, aimed at graduate students, about why you should think carefully about &lt;a href=&#34;http://www.kieranhealy.org/files/misc/workflow-apps.pdf&#34;&gt;your workflow applications&lt;/a&gt;, i.e., the software tools you use to write papers. It consists of some general principles to bear in mind together with a bunch of specific software recommendations. There is a sample &lt;a href=&#34;https://github.com/kjhealy/workflow-paper&#34;&gt;github repository&lt;/a&gt; that contains the &lt;code&gt;.org&lt;/code&gt; source file the PDF is created from.&lt;/p&gt;
+  &lt;/section&gt;
+&lt;/section&gt;
+
+&lt;section id=&#34;home-right&#34;&gt;
+  &lt;h2&gt;&lt;a href=&#34;resources/emacs-starter-kit&#34; title=&#34;kjhealy/emacs-starter-kit @ GitHub&#34;&gt;An Emacs Starter Kit for the Social Sciences&lt;/a&gt;&lt;/h2&gt;
+  &lt;section&gt;
+    &lt;p&gt;This is a fork of Eric Schulte&#39;s &lt;a href=&#34;http://github.com/eschulte/emacs-starter-kit/tree&#34;&gt;Emacs Starter Kit&lt;/a&gt; (itself an offshoot of &lt;a href=&#34;http://github.com/eschulte/emacs-starter-kit/tree&#34;&gt;Phil Hagelberg&#39;s original&lt;/a&gt;) with additional tools included for social scientists, mostly related to writing books or papers in LaTeX and analyzing quantitative data using &lt;a href=&#34;http://ess.r-project.org/&#34;&gt;ESS&lt;/a&gt; and &lt;a href=&#34;http://www.r-project.org/&#34;&gt;R&lt;/a&gt;. The goal is to provide a drop-in configuration for Emacs that makes it easier to use right from the get-go. If you know about &lt;a href=&#34;http://git-scm.com/&#34; title=&#34;Git - Fast Version Control System&#34;&gt;Git&lt;/a&gt;, &lt;a href=&#34;http://github.com/kjhealy/emacs-starter-kit/tree/master&#34; title=&#34;kjhealy&#39;s emacs-starter-kit at master &amp;mdash; GitHub&#34;&gt;you can clone the repository&lt;/a&gt;.&lt;/p&gt;
+  &lt;/section&gt;
+&lt;/section&gt;
+
+&lt;section style=&#34;clear:both;&#34;&gt;&lt;/section&gt;
+
+&lt;section id=&#34;home-left&#34;&gt;
+  &lt;h2&gt;&lt;a href=&#34;https://github.com/kjhealy/pandoc-templates&#34;&gt;Pandoc Templates&lt;/a&gt; &amp;rarr;&lt;/h2&gt;
+  &lt;section&gt;
+    &lt;p&gt;Some rudimentary Pandoc templates, meant to go in &lt;code&gt;~/.pandoc/templates&lt;/code&gt;. Pointed to them directly with the &lt;code&gt;--template&lt;/code&gt; or &lt;code&gt;--css&lt;/code&gt; switches as appropriate, and use them with what&#39;s provided in &lt;a href=&#34;http://github.com/kjhealy/latex-custom-kjh&#34;&gt;&lt;code&gt;latex-custom-kjh&lt;/code&gt;&lt;/a&gt;. Includes a shell script for setting pandoc up to work with the &lt;a href=&#34;http://marked2app.com&#34;&gt;Marked&lt;/a&gt; app, a handy HTML live previewer for &lt;code&gt;.md&lt;/code&gt; files.
+    &lt;/p&gt;
+  &lt;/section&gt;
+&lt;/section&gt;
+
+&lt;section id=&#34;home-right&#34;&gt;
+  &lt;h2&gt;&lt;a href=&#34;http://github.com/kjhealy/latex-custom-kjh&#34;&gt;LaTeX Templates and Styles&lt;/a&gt; &amp;rarr;&lt;/h2&gt;
+  &lt;section&gt;
+    &lt;p&gt;A collection of LaTeX style files, templates, and org-mode documents providing some nice layouts for typesetting articles using pdfLaTeX or XeLaTeX. They make a pipeline that lets you begin with an &lt;code&gt;.org&lt;/code&gt; file in Emacs (as set up in the &lt;a href=&#34;http://kjhealy.github.com/emacs-starter-kit/&#34;&gt;Starter Kit&lt;/a&gt;), and go from there to a nice, fully-processed PDF in one step. Or the pieces can be used separately to set up a &lt;code&gt;.tex&lt;/code&gt; file with a nice Article layout.&lt;/p&gt;  
+  &lt;/section&gt;
+&lt;/section&gt;
+
+&lt;section style=&#34;clear:both;&#34;&gt;&lt;/section&gt;
+
+&lt;section&gt;
+  &lt;p&gt; 
+    &lt;img class=&#34;fpimg&#34; src=&#34;http://kieranhealy.org/images/slide-sample.jpg&#34;&gt;
+  &lt;p&gt;  
+
+&lt;h2&gt;Present more effectively. For Science.&lt;/h2&gt; For all your corporate presentation needs, here is a simple &lt;a href=&#34;http://kieranhealy.org/files/misc/ApertureScienceKeynote.zip&#34;&gt;Aperture Science Keynote Theme&lt;/a&gt; (.zip file). The theme requires you have &lt;a href=&#34;http://en.wikipedia.org/wiki/Univers&#34;&gt;Univers&lt;/a&gt; installed. For maximum effectiveness, the use of this theme is best accompanied by a well-prepared text, a clear speaking voice, and—for fielding questions—a functional Aperture Science military android. To use the theme, unzip it into the &lt;code&gt;~/Library/Application Support/iWork/Keynote/Themes/&lt;/code&gt; folder. If you do not have the &lt;a href=&#34;http://en.wikipedia.org/wiki/Univers&#34;&gt;Univers&lt;/a&gt; typeface installed you will likely get errors about missing resources. See &lt;a href=&#34;http://www.kieranhealy.org/blog/archives/2011/04/19/present-more-effectively-for-science/&#34;&gt;this post&lt;/a&gt; for some more screenshots.&lt;/p&gt;
+&lt;/section&gt;
+
+&lt;section style=&#34;clear:both;&#34;&gt;&lt;/section&gt;
+
+&lt;section id=&#34;home-left&#34;&gt;
+  &lt;h2&gt;&lt;a href=&#34;http://kjhealy.github.com/kjh-vita/&#34;&gt;So You Like My Vita&lt;/a&gt; &amp;rarr;&lt;/h2&gt;
+  &lt;section&gt;
+    &lt;p&gt;Every few months I get an email asking to see the LaTeX markup that I use to generate my &lt;a href=&#34;http://kieranhealy.org/vita.pdf&#34;&gt;Curriculum Vitae&lt;/a&gt;. So, &lt;a href=&#34;http://kjhealy.github.com/kjh-vita/&#34; title=&#34;kjhealy&#39;s kjh-vita @ GitHub&#34;&gt;here it is&lt;/a&gt;. Feel free to adapt it yourself. If you make stylistic modifications, I encourage you to fork the project on GitHub and make them available to others in the same way.&lt;/p&gt;
+  &lt;/section&gt;
+&lt;/section&gt;
+
+&lt;section id=&#34;home-right&#34;&gt;
+  &lt;h2&gt;&lt;a href=&#34;https://github.com/kjhealy/socbibs&#34; title=&#34;kjhealy&#39;s socbibs at  GitHub&#34;&gt;BibTeX Files&lt;/a&gt; &amp;rarr;&lt;/h2&gt;
+  &lt;section&gt;
+    &lt;p&gt;I maintain a &lt;a href=&#34;https://github.com/kjhealy/socbibs&#34; title=&#34;kjhealy&#39;s socbibs at  GitHub&#34;&gt;BibTeX file&lt;/a&gt; of (mostly) sociology books and articles containing references cited in my own work. Additions and corrections welcome. I also periodically update a BibTeX database of &lt;a href=&#34;http://kjhealy.github.com/bib/&#34; title=&#34;kjhealy&#39;s philbib @ GitHub&#34;&gt;philosophy articles and books&lt;/a&gt;, mostly metaphysics and epistemology.&lt;/p&gt;
+  &lt;/section&gt;
+&lt;/section&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
