@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Test on Boaz Sobrado</title>
-    <link>http://localhost:1313/categories/test/</link>
+    <link>http://sobradob.github.io/categories/test/</link>
     <description>Recent content in Test on Boaz Sobrado</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 29 Mar 2014 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/test/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://sobradob.github.io/categories/test/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Just another sample post 1</title>
-      <link>http://localhost:1313/blog/first/</link>
+      <link>http://sobradob.github.io/blog/first/</link>
       <pubDate>Sat, 29 Mar 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/first/</guid>
+      <guid>http://sobradob.github.io/blog/first/</guid>
       <description>
 
 &lt;h2 id=&#34;motherfuckers-its-on:e8fb9c67eba912c72729806db31eaa1b&#34;&gt;Motherfuckers its on&lt;/h2&gt;
@@ -27,10 +27,10 @@
     
     <item>
       <title>Just another sample post 2</title>
-      <link>http://localhost:1313/blog/second/</link>
+      <link>http://sobradob.github.io/blog/second/</link>
       <pubDate>Sat, 29 Mar 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/second/</guid>
+      <guid>http://sobradob.github.io/blog/second/</guid>
       <description>
 
 &lt;h2 id=&#34;this-is-the-end:9f7936f9b5c071ae81db818b80a44a0d&#34;&gt;This is the end&lt;/h2&gt;
