@@ -1,38 +1,26 @@
 <div class="sidebar">
-
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
-      <h1>Boaz Sobrado</h1>
-	  <p class="lead">
-      {{ with .Site.Params.description }} {{.}} {{ else }}Just a Hungarian-Costa Rican <a href="http://hugo.spf13.com">Cambridge University</a> graduate exploring the world and <a href="http://twitter.com/mdo">life</a>.{{end}}
+      <a href="{{ .Site.BaseURL }}"><h1>{{ .Site.Title }}</h1></a>
+      <p class="lead">
+      {{ with .Site.Params.description }} {{.}} {{ else }}Personal and professional website. Occasional scribbles and scrawls.{{end}}
       </p>
     </div>
 
-<ul class="catlist">
+    <ul class="sidebar-nav">
+      <a href="/">About me</a>
+	  <br>
+	  <a href="/blog">Blog</a>
+	  <br>
+	  <a href="/cv">Curriculum Vitae</a>
+	  <br>
+	  <br>
+	  <a href="/">Linkedin</a>
+	  <br>
+	  <a href="/">Github</a>
 
-          <li>
-            <a href="/">
-              <span> About Me </span>
-            </a>
-            </li>
+    </ul>
 
-            <li>
-            <a href="/blog/">
-                <span> Blog </span>
-            </a>
-            </li>
-            <li>
-            <a href="/cv/">
-                <span> CV </span>
-            </a>
-            </li>
-		    <li>
-            <a href="/media/">
-                <span> In the news </span>
-            </a>
-            </li>
-</ul>
-
+    <p>{{ with .Site.Params.copyright }}{{.}}{{ else }}&copy; {{.Now.Format "2006"}}. All rights reserved. {{end}}</p>
   </div>
 </div>
-

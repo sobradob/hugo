@@ -3,16 +3,15 @@
 <head>
     <meta charset="utf-8">
 
-    {{ template "chrome/meta.html" . }}
 
     <base href="{{ .Site.BaseUrl }}">
     <title>{{ .Site.Title }}</title>
     <link rel="canonical" href="{{ .Permalink }}">
     <link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+	 {{ template "chrome/head.html" . }}
 
-    {{ template "chrome/head_includes.html" . }}
 </head>
-<body lang="en">
+<body lang="en" class ="theme-base-0d">
 
   {{ template "chrome/sidebar.html" . }}
   
@@ -20,19 +19,8 @@
     <div class="page">
 
 <h1>Who am I?</h1>
-<div align="right"><p><i>"My name is Yon Yonson,<br>
-I come from Wisconsin.<br>
-I work in a lumber yard there.<br>
-Everyone that I meet<br>
-When I walk down the street,<br>
-Says "Hello! What's your name?"<br>
-And I say: My name is Yon Yonson.."</i><br>
-<b><i>Slaughterhouse 5</i> - Kurt Vonnegut</b></p></div>
 <p class="lead">Professionally, I am interested in how technology and science can bypass swathes of development stages in the less developed half of the world.</p>
 <br>
-<div align="right"><p><i>"Money, women, cards & gin<br>
-Were the four things that did him in."</i><br>
-<b><i>Burmese days </b></i>- George Orwell</p></div>
 <br>
 <p class="lead">Personally, my vices include travelling, literature and politics. I also enjoy good company, food and wine too much. Occasional dabbles in coding and writing.</p>
 

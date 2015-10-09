@@ -32,7 +32,7 @@
  */
 
 html {
-  font-family: "ff-meta-serif-web-pro", Georgia, Times, "Times New Roman", serif; 
+  font-family: "ff-meta-serif-web-pro","Computer Modern Serif",Georgia, Times, "Times New Roman", serif; 
 }
 @media (min-width: 48rem) {
   html {
@@ -52,6 +52,7 @@ html {
   padding: 2rem 1rem;
   color: rgba(255,255,255,.5);
   background-color: #202020;
+
 }
 @media (min-width: 48rem) {
   .sidebar {
