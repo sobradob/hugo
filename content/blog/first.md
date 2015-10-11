@@ -1,7 +1,7 @@
 +++
 date = "2015-10-09T10:23:55+02:00"
 draft = false
-title = "Lorem Ipusm"
+title = "Testing testing"
 
 +++
 
