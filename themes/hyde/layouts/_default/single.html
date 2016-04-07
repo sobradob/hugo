@@ -8,7 +8,14 @@
 			  <span class="post-date">{{ .Date.Format "Mon, Jan 2, 2006" }}</span>
 			      {{ .Content }}
 			</div>
-
+			
+			<h2>Categories</h2>
+			<ul id="tags">
+			  {{ range .Params.tags }}
+				<li><a href="/tags/{{ . | urlize }}">{{ . }}</a> </li>
+			  {{ end }}
+			</ul>
+			
 			{{ if and (isset .Site.Params "disqusShortname") (ne .Site.Params.disqusShortname "") }}
 				<h2>Comments</h2>
 				{{ partial "disqus" . }}
@@ -16,4 +23,5 @@
 		</div>
 
   </body>
+
 </html>

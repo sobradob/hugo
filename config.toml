@@ -1,9 +1,14 @@
 contentdir = "content"
 layoutdir = "layouts"
 publishdir = "public"
-baseURL = "http://sobradob.github.io/"
+baseURL = "http://www.boazsobrado.com/"
 languageCode = "en-us"
 title = "Boaz Sobrado"
 canonifyurls= true
 description="Personal and professional website. Occasional scribbles and scrawls."
 
+[params]
+  disqusShortname = "boazsobrado"
+  
+  [taxonomies]
+tag = "tags"

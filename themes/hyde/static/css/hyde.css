@@ -58,6 +58,7 @@ html {
 .sidebar-nav {
   text-align: center;
   }
+  
 @media (min-width: 48rem) {
   .sidebar {
     position: fixed;
@@ -230,3 +231,7 @@ html {
 .theme-base-0f .related-posts li a:hover {
   color: #8f5536;
 }
+
+p.capitalize {
+	    text-transform: capitalize;
+	}
