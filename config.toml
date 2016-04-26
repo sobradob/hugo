@@ -6,6 +6,7 @@ languageCode = "en-us"
 title = "Boaz Sobrado"
 canonifyurls= true
 description="Personal and professional website. Occasional scribbles and scrawls."
+theme ="hyde"
 
 [params]
   disqusShortname = "boazsobrado"

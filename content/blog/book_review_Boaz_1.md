@@ -3,6 +3,7 @@ date = "2016-02-17T22:22:16-08:00"
 draft = false
 title = "Boaz's Review of Books"
 description = "Reviewing books"
+tags = ["books"]
 +++
 A few books I recently finished reading are Ben Bernanke's [Courage to act]( http://www.nytimes.com/2015/10/25/books/review/ben-bernankes-the-courage-to-act.html ), Dr Philip Tetlock's [Superforecasting]( http://www.economist.com/news/books-and-arts/21666098-forecasting-talent-luckily-it-can-be-learned-unclouded-vision ),  Peter Thiel’s [Zero to One]( http://zerotoonebook.com/), an unofficial biography on George Soros, and collection of druggie short stories titled [Acid House](http://www.independent.co.uk/arts-entertainment/books/book-review-meeting-god-down-the-pub-the-acid-house-irvine-welsh-cape-pounds-999-1370403.html) by Irvine Welsh. I do not expect to do justice to the arguments in the books (read a real book review if you want that), I'm just sharing the lessons I learned from them as a little exercise.
 

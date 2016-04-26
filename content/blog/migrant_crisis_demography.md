@@ -2,6 +2,7 @@
 date = "2015-11-05T22:22:16-08:00"
 draft = false
 title = "The Migrant Crisis and Demography"
+tags = ["politics"]
 
 +++
 

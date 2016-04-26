@@ -2,7 +2,7 @@
 date = "2012-11-20T15:52:58+02:00"
 draft = false
 title = "Don't fear foreign education"
-
+tags = ["politics"]
 +++
 Startling new data show that emigration out of Hungary is at a 20-year record high and that many more Hungarians have seriously considered leaving Hungary to live, work, or study in another member state of the EU. But instead of speaking ominously about the potentially catastrophic consequences of such emigration trends for Hungary, it is useful to think of this increased mobility as a potentially positive phenomenon.
 

@@ -3,6 +3,7 @@ date = "2016-02-29T22:22:16-08:00"
 draft = false
 title = "Donald Trump and Zuckerberg's Matrix"
 description = "Reviewing books"
+tags = ["politics"]
 +++
 
 Prediction markets have the Republican nomination for President of the USA going to billionaire reality TV host and megalomaniac Donald Trump. On the other side of the aisle, self-described socialist Sanders is making Hillary Clinton’s campaign sweat. This isn’t “politics as usual” for anyone except the writers of The Simpsons.
