@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>Where I slept in 2015 &middot; Boaz Sobrado</title>
+
+  
+  <link rel="stylesheet" href="http://boazsobrado.com/css/poole.css">
+  <link rel="stylesheet" href="http://boazsobrado.com/css/hyde.css">
+  <link rel="stylesheet" href="http://boazsobrado.com/css/poole-overrides.css">
+  <link rel="stylesheet" href="http://boazsobrado.com/css/hyde-overrides.css">
+  <link rel="stylesheet" href="http://boazsobrado.com/css/hyde-x.css">
+  <link rel="stylesheet" href="http://boazsobrado.com/css/highlight/sunburst.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://boazsobrado.com/touch-icon-144-precomposed.png">
+  <link href="http://boazsobrado.com/favicon.png" rel="icon">
+
+  
+  
+  
+  
+
+  <meta name="description" content="This year has been an adventure. I&#39;ve been on three continents, countless countries and dozens of cities. I thought it would be an interesting project to quantify it all by visualising on a map the places where I slept.">
+  <meta name="keywords" content="your,default,page,keywords">
+  
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-68708652-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+  
+</head>
+<body class="theme-base-0d">
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      
+      <h1>Boaz Sobrado</h1>
+      <p class="lead">Personal and professional website.</p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item"><a href="http://boazsobrado.com/">Blog</a></li>
+      
+      <li class="sidebar-nav-item"><a href="http://boazsobrado.com/aboutme/">About me</a></li>
+      
+    </ul>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item">
+      <a href="http://github.com/sobradob"><i class="fa fa-github-square fa-3x"></i></a>
+      
+      
+      
+      
+      
+      <a href="http://twitter.com/sobradob"><i class="fa fa-twitter-square fa-3x"></i></a>
+      
+      <a href="http://boazsobrado.com/index.xml" type="application/rss+xml"><i class="fa fa-rss-square fa-3x"></i></a>
+      </li>
+    </ul>
+
+    
+
+    <p>Copyright &copy; 2017 <a href="http://boazsobrado.com/license/">License</a><br/>
+       Powered by <a href="http://gohugo.io">Hugo</a> and <a href="https://github.com/zyro/hyde-x">Hyde-X</a></p>
+  </div>
+</div>
+
+
+<div class="content container">
+  <div class="post">
+    <h1 class="post-title">Where I slept in 2015</h1>
+    <span class="post-date">Dec 22, 2015 &middot; 2 minute read &middot; <a href="http://boazsobrado.com/blog/2015/12/22/where-i-slept-in-2015/#disqus_thread">Comments</a>
+    
+    <br/>
+    <a class="label" href="http://boazsobrado.com/categories/r">R</a><a class="label" href="http://boazsobrado.com/categories/travel">travel</a>
+    </span>
+    <p>This year has been an adventure. I&rsquo;ve been on three continents, countless countries and dozens of cities.
+I thought it would be an interesting project to quantify it all by visualising on a map the places where I slept.
+This is the result:
+<img src="/images/Asia2015.png" alt="Asia" />
+<img src="/images/EU2015.png" alt="EU" />
+<img src="/images/USA2015.png" alt="USA" />
+In case you are interested in how I did it you can find the code below. I was inspired by <a href="http://blog.revolutionanalytics.com/2015/11/marriott.html">this</a> blog post.</p>
+
+<pre><code>library(readr)
+library(ggmap)
+library(&quot;shiny&quot;)
+
+days&lt;-read_csv(&quot;daysinayear/days.csv&quot;)# spreadsheet with place in one column and days slept in another
+devtools::install_github(&quot;bwlewis/rthreejs&quot;)
+#First step: get lat and lng for where I've slept using Google Maps API
+x&lt;-geocode(days$Location)
+days&lt;-cbind(days,x)
+
+# Make a cool spinning globe
+globejs(img=&quot;http://2.bp.blogspot.com/-Jfw4jY6vBWM/UkbwZhdKxuI/AAAAAAAAK94/QTmtnuDFlC8/s1600/2_no_clouds_4k.jpg&quot;,
+        lat = days$lat,lon = days$lon, value=days$Days,bg=&quot;white&quot;, atmosphere = TRUE, color = &quot;red&quot;)
+
+#create the square plots for Asia, Europe and USA
+windows(6,6);
+asiaPlot &lt;- qmap(location = &quot;Asia&quot;, zoom = 3, legend = &quot;none&quot;, maptype = &quot;satellite&quot;, darken = 0.01, extent = &quot;device&quot;) 
+asiaPlot &lt;- asiaPlot + 
+  geom_point(data = days, aes(y = lat, x = lon, colour = &quot;blue&quot;, size=Days, alpha=.5,show_guide = FALSE))+
+  guides(color=F, size = F,alpha = F)
+(asiaPlot &lt;- asiaPlot + scale_size_continuous(range = c(3,10)))
+
+windows(6,6);
+eurPlot  &lt;- qmap(location = &quot;Europe&quot;, zoom = 3, legend = &quot;none&quot;, maptype = &quot;satellite&quot;, darken = 0.01, extent = &quot;device&quot;) 
+eurPlot  &lt;- eurPlot  + 
+  geom_point(data = days, aes(y = lat, x = lon, colour = &quot;blue&quot;, size=Days, alpha=.5,show_guide = FALSE))+
+  guides(color=F, size = F,alpha = F)
+(eurPlot  &lt;- eurPlot  + scale_size_continuous(range = c(3,10)))
+
+usPlot  &lt;- qmap(location = &quot;USA&quot;, zoom = 3, legend = &quot;none&quot;, maptype = &quot;satellite&quot;, darken = 0.01, extent = &quot;device&quot;) 
+usPlot  &lt;- usPlot  + 
+  geom_point(data = days, aes(y = lat, x = lon, colour = &quot;blue&quot;, size=Days, alpha=.5,show_guide = FALSE))+
+  guides(color=F, size = F,alpha = F)
+(usPlot  &lt;- usPlot  + scale_size_continuous(range = c(3,10)))
+
+</code></pre>
+
+  </div>
+  <div id="disqus_thread"></div>
+</div>
+
+
+<script type="text/javascript">
+var disqus_shortname = "your_disqus_shortname";
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+
+
+
+<script type="text/javascript">
+    var disqus_shortname = "your_disqus_shortname";
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+<script src="http://boazsobrado.com/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
+

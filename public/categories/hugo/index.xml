@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hugo on Boaz Sobrado&#39;s Website</title>
+    <link>http://boazsobrado.com/categories/hugo/index.xml</link>
+    <description>Recent content in Hugo on Boaz Sobrado&#39;s Website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="http://boazsobrado.com/categories/hugo/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>How I made this website - tutorial</title>
+      <link>http://boazsobrado.com/blog/2016/04/20/how-i-made-this-website---tutorial/</link>
+      <pubDate>Wed, 20 Apr 2016 14:12:49 -0600</pubDate>
+      
+      <guid>http://boazsobrado.com/blog/2016/04/20/how-i-made-this-website---tutorial/</guid>
+      <description>
+
+&lt;h3 id=&#34;theory&#34;&gt;Theory&lt;/h3&gt;
+
+&lt;p&gt;As our activities are increasingly organised online – from business through voting to leisure time – knowing how to write (or even just understand) code is an increasingly coveted skill. Its benefits range wide; if you can code you will get a better job, improve your analytical skills, make work processes easier and cheaper.&lt;/p&gt;
+
+&lt;p&gt;These reasons led us – Dora and Boaz, authors of this article – to set up our websites as a means of learning and practising a bit of coding. We used amazing open source projects and their online tutorials as guidance, however, we have found that these tutorials are usually not written for people with no previous background in any sort of coding/hacking. Consequently, we have decided to write a tutorial in simple English in the hope that it will make it easier for you to set up your own website and really understand the logic behind each step.&lt;/p&gt;
+
+&lt;h4 id=&#34;the-essentials-you-need-to-know-about-a-website&#34;&gt;The essentials you need to know about a website&lt;/h4&gt;
+
+&lt;p&gt;Have you ever thought of how your browser displays websites? In the early days of the internet the founder of the World Wide Web invented the &lt;a href=&#34;https://www.wikiwand.com/en/HTML&#34;&gt;Hypertext Markup Language&lt;/a&gt; in order to render sites. It is a remarkably simple language, and almost every single stock photo related to „coding” has it.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://thumb101.shutterstock.com/display_pic_with_logo/526873/329205053/stock-photo-programming-work-time-programmer-typing-new-lines-of-html-code-laptop-and-hand-closeup-working-329205053.jpg&#34; alt=&#34;stock&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;What HTML does is simply to tell your browser what things are and how to show them. For instance, a paragraph will be within &lt;code&gt;&amp;lt;p&amp;gt; &amp;lt;\p&amp;gt;&lt;/code&gt; tags, an image will be within &lt;code&gt;&amp;lt;img&amp;gt; &amp;lt;\img&amp;gt;&lt;/code&gt;tags and a headline (title) will be within &lt;code&gt;&amp;lt;h1&amp;gt; &amp;lt;\h1&amp;gt;&lt;/code&gt;tags (smaller titles would be &lt;code&gt;&amp;lt;h2&amp;gt; &amp;lt;\h2&amp;gt;&lt;/code&gt; and so on). Really quite simple stuff, this is how websites were built in the early days.
+Then at some point someone realised that you could do a lot more if you referenced how different things look in a separate file, called &lt;a href=&#34;https://www.wikiwand.com/en/Cascading_Style_Sheets&#34;&gt;Cascading Style Sheets (CSS)&lt;/a&gt;. In a CSS document you can specify that all paragraphs look the following way:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;p{ color: white;
+background: orange}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This enables the separation of the document content from document presentation, which can make things simpler (for instance, several HTML pages can share the same look by being linked to the same CSS file). Unfortunately, it comes at a price: it makes the code a lot less readable. Of course, you only care about this if you actually have to change or fix code.&lt;/p&gt;
+
+&lt;p&gt;In the same vein, &lt;a href=&#34;https://www.wikiwand.com/en/JavaScript&#34;&gt;JavaScript&lt;/a&gt; was also introduced to websites to help with all sorts of fancy effects. Pop up galleries, &lt;a href=&#34;http://www.creativebloq.com/web-design/parallax-scrolling-1131762&#34;&gt;parallax&lt;/a&gt;? That is all JS.&lt;/p&gt;
+
+&lt;p&gt;So do you need to know how to code HTML, CSS and JavaScript in order to make a fancy website in 2016? Fortunately, like Newton, we can stand on the shoulder of giants and use code that other people have made and have unselfishly made free to use. As an engine, we will use &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;, an open source static website generator. &lt;strong&gt;Wait, what?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;What is a &lt;a href=&#34;https://www.wikiwand.com/en/Static_web_page&#34;&gt;static website&lt;/a&gt;? A static website is one which does not have to be generated each time it is viewed, but rather is generated once. Its like handing out a preprinted business card vs. writing down your name and phone number on a napkin with lip stick (both have their uses).&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;What does Hugo do? Hugo can render your website lightning fast by stitching all separate elements together. You put your content in a folder called content, the HTML layout of the website in the layout folder, the CSS and JavaScript code in a Static folder, and hugo stitches all of it together to create a Public folder. This Public folder is all you need to upload to a hosting site to make your browser display your site. What makes it super awesome is that you can serve your website with Hugo immediately so you can see changes made in editing as you do it. Don&amp;rsquo;t worry if this is all confusing, the main point is that Hugo helps stich together different elements to make your life easier.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Once you have all these files ready, a hosting service is needed that will provide storage for our files and access to the internet, so others will also be able to view our site. A host is usually a large datacenter (also called a &lt;a href=&#34;https://www.wikiwand.com/en/Web_server&#34;&gt;server&lt;/a&gt;). So if you created your files, uploaded them to a server how can others reach it? That is where the address of the website comes in, in other names the domain or &lt;a href=&#34;https://www.wikiwand.com/en/Uniform_Resource_Locator&#34;&gt;URL&lt;/a&gt;. Domain and hosting can be bought together or separately from dozens of companies online. How do you choose one? Well we went for the company that spends most on advertising.&lt;/p&gt;
+
+&lt;p&gt;&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/sS9-CDcDNZ8&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;In the following steps we will explain how we know what files to create for our website, and how we dealt with the issue of hosting and domain name.&lt;/p&gt;
+
+&lt;h3 id=&#34;practice&#34;&gt;Practice&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;We bought our custom domain on Godaddy.com for 2 years, and did not buy additional hosting. The reason for that is that we used GitHub which offers free hosting.&lt;/li&gt;
+&lt;li&gt;Then we registered on &lt;a href=&#34;www.gitbub.com&#34;&gt;GitHub&lt;/a&gt;. GitHub is a sort of „Facebook” for nerds, where they can share code with each other and work together based on simple sounding complicated principles &lt;a href=&#34;https://xkcd.com/1597/&#34;&gt;nobody really understands&lt;/a&gt;. For the moment you can forget about GitHub and focus on creating the files needed for the website.&lt;/li&gt;
+&lt;li&gt;We used Hugo to help us with setting up the content of the website. Hugo – just like GitHub – is free to use. Installing Hugo can be tricky if you do not have any programming background. You have to &lt;a href=&#34;https://gohugo.io/tutorials/installing-on-windows/&#34;&gt;read the tutorial and download&lt;/a&gt; the .exe file and rename it simply to Hugo. Then you have to &lt;a href=&#34;http://www.computerhope.com/issues/ch000549.htm&#34;&gt;edit your PATH&lt;/a&gt;. A PATH really is literally a path: the unique way to find each file on your laptop which is displayed on the top of your file explorer, for example &lt;code&gt;C:\Users\Hugo&lt;/code&gt;. Don’t forget you might have to run the program as Admin (as one of the authors found out after much frustration).&lt;/li&gt;
+&lt;li&gt;Now you should be all set up to execute commands via Hugo. To open the command prompt, open your start menu and type „cmd” in the search filed. It should be alright to simply left click on it to open, however, if you find later when executing commands that you get the error line „access denied”, you can fix this by first right clicking on cmd and then choose „run as Admin”&lt;/li&gt;
+&lt;li&gt;In the command prompt simply type &lt;code&gt;hugo version&lt;/code&gt; to check if the installation is successful. This command will give a short description of the version you are using if everything went well with installation and the account you are operating from has admin rights. If it still does not work, double check the name you  have given to the hugo.exe file, you have to use exactly that without the file extension (.exe) to make the command work.&lt;/li&gt;
+&lt;li&gt;Using  &lt;code&gt;cd&lt;/code&gt; command you can navigate the command line to a destination of your choice where you want to store the files which are soon to be created to set up your website. Navigating means that you ask the command prompt to virtually point to the given folder where you want your commands to be carried. If your command is to create a new text file, you have to execute this command within the folder where you want the text file to be placed. For example, when you first open the command prompt it will always be at &lt;code&gt;C:\Windows\System32&lt;/code&gt;. To change to drive D, simply type D:, press enter and it will show the new location as D:&amp;gt;. From now on when you want to go further down the folder hierarchy, start with &lt;code&gt;cd&lt;/code&gt; then simply add the path that leads to the desired folder:  &lt;code&gt;cd D:\Documents&lt;/code&gt; to reach the Documents folder. If you are unsure about the path, the easiest solution is simply to open your file manager and check the order of folders. You could also be oldschool and type &lt;code&gt;dir&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Once there, the command &lt;code&gt;hugo new site REPLACETHISWITHYOURPROJECTSNAME&lt;/code&gt; will create a set of subfolders. These subfolders are: &lt;a href=&#34;https://gohugo.io/overview/quickstart/&#34;&gt;archetypes, content,data, layouts, static and config.toml&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;hugo new post PUTTHENAMEOFYOURPOSTHERE.md&lt;/code&gt; is the command to create a file with .md extension and will be put in the content folder. The .md file can opened and edited with Notepad. It already contains the date, the status and title of the document. You can edit all these manually and make sure you undraft it by replacing &lt;code&gt;draft=true&lt;/code&gt; with &lt;code&gt;draft=false&lt;/code&gt;. This way the document will be instantly published when your website goes live.  &lt;a href=&#34;https://www.wikiwand.com/en/Markdown&#34;&gt;Markdown&lt;/a&gt; is a plain text markup language useful for formatting text that can be turned into HTML easily. Basically what this means is it is an easy to read and write plain text format that you can use to embed pictures, or any other stuff.&lt;/li&gt;
+&lt;li&gt;Now you will need to associate your post with a theme. Hugo has a range of free themes that you can copy paste and modify to your own needs. These themes are stored on GitHub, and to be able to copy them to your pc you need to &lt;a href=&#34;https://git-scm.com/downloads&#34;&gt;download and install Git software&lt;/a&gt;. Remember, if you want to run git commands through your command line, you will have to add git to your path and reopen it. I recommend using the Git Bash command line.&lt;/li&gt;
+&lt;li&gt;I recommend installing all themes so later you can change your mind or just experiment. You can do so easily with git: &lt;code&gt;git clone --recursive https://github.com/spf13/hugoThemes.git themes&lt;/code&gt; is the command to get all themes. It will take several minutes.&lt;/li&gt;
+&lt;li&gt;So now you have a sketch post and all themes among your files. Hugo has an built in local server that lets you view your site before publishing it. Use &lt;code&gt;hugo server –– watch  –t PUTTHEMEHERE&lt;/code&gt; to have a look at &lt;a href=&#34;http://localhost:1313.com&#34;&gt;http://localhost:1313.com&lt;/a&gt; . Use this tool to perfect your site before publishing it. You can exit with Ctrl + C.&lt;/li&gt;
+&lt;li&gt;Play around with the HTML, JS and CSS files to make the website look the way you want. If in doubt, Google! This is the best way to learn how things work. Keep in mind that each folder contains different elements which Hugo uses to put a website together. The content folder has your blog posts, the layouts folder has the html files which are used to build the website, the static file contains other elements that have to be hosted, such as images and CSS files.&lt;/li&gt;
+&lt;li&gt;Now that your website is nice and ready get it on Github, here&amp;rsquo;s a &lt;a href=&#34;https://gohugo.io/tutorials/github-pages-blog/&#34;&gt;tutorial&lt;/a&gt;. We used the &amp;ldquo;Hosting Personal/Organisation Pages&amp;rdquo; part because it seemed easiest. What you want to do is to create two repositories (locations on github where you store code): one with your hugo code (what hugo uses to make the website) and one with your public folder (which are the files your browser will use to render your website). To make things easier (or more complicated) the former will be a submodule of the latter.&lt;/li&gt;
+&lt;li&gt;Don&amp;rsquo;t forget to open your config.toml file with Notepad and replace base URL with your GitHub repository’s web address. This uses hugo&amp;rsquo;s handy little feature that uses variables to build your website through .toml files. For instance, you can quickly change the title of your website by editing the title variable, instead of changing it at every place it occurs in the html code.&lt;/li&gt;
+&lt;li&gt;Run the script you named &lt;code&gt;deploy.sh&lt;/code&gt; (see the previously linked tutorial) by typing &lt;code&gt;deploy.sh&lt;/code&gt; in the command line to publish your files to the GitHub server. Basically what a script does is it executes commands after each other so you don&amp;rsquo;t have to type them in one after each other. When executed it will perform the following list of commands without you having to do all of them.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;pre&gt;&lt;code&gt;
+#!/bin/bash
+
+echo -e &amp;quot;\033[0;32mDeploying updates to GitHub...\033[0m&amp;quot;
+
+# Build the project.
+hugo -t robust # if using a theme, replace by `hugo -t &amp;lt;yourtheme&amp;gt;`
+
+# Go To Public folder
+cd public
+# Add changes to git.
+git add -A
+
+# Commit changes.
+msg=&amp;quot;rebuilding site `date`&amp;quot;
+if [ $# -eq 1 ]
+  then msg=&amp;quot;$1&amp;quot;
+fi
+git commit -m &amp;quot;$msg&amp;quot;
+
+# Push source and build repos.
+git push origin master
+
+# Come Back
+cd ..
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Your website should be available shortly at your GitHub repository’s web address.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

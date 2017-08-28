@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Maps on Boaz Sobrado&#39;s Website</title>
+    <link>http://boazsobrado.com/categories/maps/index.xml</link>
+    <description>Recent content in Maps on Boaz Sobrado&#39;s Website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="http://boazsobrado.com/categories/maps/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Using Google Maps API: Mol Bubi Competition</title>
+      <link>http://boazsobrado.com/blog/2015/11/05/using-google-maps-api-mol-bubi-competition/</link>
+      <pubDate>Thu, 05 Nov 2015 11:36:16 +0100</pubDate>
+      
+      <guid>http://boazsobrado.com/blog/2015/11/05/using-google-maps-api-mol-bubi-competition/</guid>
+      <description>&lt;p&gt;A few friends and I are involved in the Budapest public bicycle data science &lt;a href=&#34;https://dms.sztaki.hu/bubi/#/app/home&#34;&gt;competition&lt;/a&gt;. As of right now we are in the top ten, although in all honesty, it hasn&amp;rsquo;t really started yet.
+We signed a non-disclosure agreement, so I cannot really share any cool details. What I can share however, is the function I wrote in R to get calculate the distances and duration of bike trips using Google Maps&amp;rsquo; &lt;a href=&#34;https://developers.google.com/maps/?hl=en&#34;&gt;API&lt;/a&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#distance calucations
+#### This script uses RCurl and RJSONIO to download data from Google&#39;s API
+
+library(RCurl)
+library(RJSONIO)
+
+#define api key as: api&amp;lt;-&amp;quot;YOURAPI&amp;quot;
+#the function assumes address input in following dataframe:
+#lat1,lng1,lat2,lng2
+
+DistDur &amp;lt;- function(address,time = as.integer(Sys.time()),mode, return.call = &amp;quot;json&amp;quot;, sensor = &amp;quot;false&amp;quot;) {
+  address1&amp;lt;-paste(address[,1],address[,2], sep=&amp;quot; &amp;quot;)
+  address2&amp;lt;-paste(address[,3],address[,4], sep=&amp;quot; &amp;quot;)
+  root &amp;lt;- &amp;quot;https://maps.googleapis.com/maps/api/directions/&amp;quot;
+  u &amp;lt;- paste(root, return.call, &amp;quot;?origin=&amp;quot;, address1, &amp;quot;&amp;amp;destination=&amp;quot;,address2,&amp;quot;&amp;amp;departure_time=&amp;quot;,time,&amp;quot;&amp;amp;mode=&amp;quot;,mode,&amp;quot;&amp;amp;key=&amp;quot;,api,sep = &amp;quot;&amp;quot;)
+  for (a in 1:length(u)){
+    url&amp;lt;-URLencode(u[a])
+    doc &amp;lt;- getURL(url)
+    x &amp;lt;- fromJSON(doc,simplify = FALSE)
+    dist&amp;lt;-0
+    dura&amp;lt;-0
+    for (i in 1:length(x$routes[[1]]$legs[[1]]$steps))
+    {
+      dist&amp;lt;-x$routes[[1]]$legs[[1]]$steps[[i]]$distance$value+dist
+      dura&amp;lt;-x$routes[[1]]$legs[[1]]$steps[[i]]$duration$value+dura
+    }
+    address$dura[a]&amp;lt;-dura
+    address$dist[a]&amp;lt;-dist
+  }
+  return(address)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The code itself is quite simple, but its my first time using the Google Maps API and I was amazed by how easy it was. This and more can be found on my &lt;a href=&#34;www.github.com/sobradob&#34;&gt;Github&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Shiny on Boaz Sobrado&#39;s Website</title>
+    <link>http://boazsobrado.com/tags/shiny/index.xml</link>
+    <description>Recent content in Shiny on Boaz Sobrado&#39;s Website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="http://boazsobrado.com/tags/shiny/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Costa Rican Saints</title>
+      <link>http://boazsobrado.com/blog/2017/08/18/costa-rican-saints/</link>
+      <pubDate>Fri, 18 Aug 2017 22:22:16 -0800</pubDate>
+      
+      <guid>http://boazsobrado.com/blog/2017/08/18/costa-rican-saints/</guid>
+      <description>&lt;p&gt;One of the first things a traveller notices when going to Costa Rica is that almost every town or city is named after a Saint. Growing up in Costa Rica, I just assumed this was something true of all Latin American countries, a legacy of Spanish colonial times. California has San Jose, San Fransisco, etc. I thought it was like that from California to Argentina.&lt;/p&gt;
+
+&lt;p&gt;After some travelling in Latin America I realised this was simply not true. Cuba is exceptionally adept at original names (e.g. Guantanamo). Even neighbouring Nicaragua seemed to have more varied names. It turns out Costa Ricans are particularly unoriginal with names, after all approximately 10% of the population&amp;rsquo;s last name is &lt;a href=&#34;http://forebears.io/costa-rica#surnames&#34;&gt;Rodriguez, Vargas, Jimenez, Mora or Rojas&lt;/a&gt;. Similarly, 16% of all locations were named after a saint.&lt;/p&gt;
+
+&lt;p&gt;As an exercise, I built a &lt;a href=&#34;http://shiny.rstudio.com/&#34;&gt;Shiny app&lt;/a&gt; to explore all the towns with holy names, that is towns that contain &amp;ldquo;San&amp;rdquo; or &amp;ldquo;Santa&amp;rdquo; using data provided by the wonderful team at &lt;a href=&#34;http://www.estadonacion.or.cr/&#34;&gt;El Estado de la Nacion&lt;/a&gt;. Handsome sociologist &lt;a href=&#34;http://miguelsobrado.com/&#34;&gt;Miguel Sobrado&lt;/a&gt; (full disclosure: he is also my grandfather) pointed out that the places with Saint in the name seem to cluster in the Central Valley and in lands later colonised by Central Valley residents.&lt;/p&gt;
+
+&lt;p&gt;You can see the app below. It is on limited free hosting though, so it might not be available if someone spends too long on it. The menu is on the top left, the three parallel lines.&lt;/p&gt;
+
+&lt;iframe src=&#34;https://sobrado.shinyapps.io/CostaRica/&#34; style=&#34;border: none; width: 650px; height: 900px&#34;&gt;&lt;/iframe&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

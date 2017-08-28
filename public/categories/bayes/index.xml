@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bayes on Boaz Sobrado&#39;s Website</title>
+    <link>http://boazsobrado.com/categories/bayes/index.xml</link>
+    <description>Recent content in Bayes on Boaz Sobrado&#39;s Website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="http://boazsobrado.com/categories/bayes/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Bayesian Images</title>
+      <link>http://boazsobrado.com/blog/2017/05/22/bayesian-images/</link>
+      <pubDate>Mon, 22 May 2017 22:22:16 -0800</pubDate>
+      
+      <guid>http://boazsobrado.com/blog/2017/05/22/bayesian-images/</guid>
+      <description>
+
+&lt;p&gt;Graphs to accompany my poster presentation.&lt;/p&gt;
+
+&lt;h2 id=&#34;the-data-set&#34;&gt;The data set&lt;/h2&gt;
+
+&lt;p&gt;The generated data is plotted below:
+&lt;img src=&#34;http://boazsobrado.com/images/explorePlot.png&#34; alt=&#34;data&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;metropolis-hastings-algorithm&#34;&gt;Metropolis Hastings Algorithm&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://boazsobrado.com/images/metropolis_hastings2.gif&#34; alt=&#34;mhalgo&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This visual explanation of the Metropolis Hastings algorithm shows the proposal and the true density along with the Metropolis Hastings step. It was inspired and adapted from code by &lt;a href=&#34;https://www.researchgate.net/profile/Balazs_Toeroek6&#34;&gt;Balazs Torok&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;diagnostic-plots-for-beta-2-via-gibbs-sampler&#34;&gt;Diagnostic Plots for Beta 2 via Gibbs Sampler&lt;/h2&gt;
+
+&lt;h3 id=&#34;autocorrelation-plot&#34;&gt;Autocorrelation Plot&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://boazsobrado.com/images/acfb2.png&#34; alt=&#34;acf&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The autocorrelations are negligable, suggesting good mixing.&lt;/p&gt;
+
+&lt;h3 id=&#34;running-means-plot&#34;&gt;Running Means Plot&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://boazsobrado.com/images/b2runningmeans.png&#34; alt=&#34;rmp&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The running means have settled.&lt;/p&gt;
+
+&lt;h3 id=&#34;three-chain-trace-plot&#34;&gt;Three chain trace plot&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://boazsobrado.com/images/traceb2.png&#34; alt=&#34;traceplot&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;All three chains seem to be in the same place.&lt;/p&gt;
+
+&lt;h2 id=&#34;posterior-predictive-checks&#34;&gt;Posterior Predictive Checks&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://boazsobrado.com/images/ppCheck.png&#34; alt=&#34;ppcheck&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;On the left side you can see the two predictive check using the maximum as a statistic. On the right hand side you see the maximum as a statistic, and on the left hand side you see the mean.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://boazsobrado.com/images/priorPredCheck.png&#34; alt=&#34;priorPred&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This is a check of predictive accuracy of both models, for all cases, ordered from greates to smallest.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

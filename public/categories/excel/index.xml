@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Excel on Boaz Sobrado&#39;s Website</title>
+    <link>http://boazsobrado.com/categories/excel/index.xml</link>
+    <description>Recent content in Excel on Boaz Sobrado&#39;s Website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="http://boazsobrado.com/categories/excel/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>You are wasting your time with spreadsheets</title>
+      <link>http://boazsobrado.com/blog/2016/11/13/you-are-wasting-your-time-with-spreadsheets/</link>
+      <pubDate>Sun, 13 Nov 2016 15:52:58 +0200</pubDate>
+      
+      <guid>http://boazsobrado.com/blog/2016/11/13/you-are-wasting-your-time-with-spreadsheets/</guid>
+      <description>&lt;p&gt;This week I had an interesting conversation (as interesting as these conversations can get) about the use of spreadsheets in business. I am still a little bit surprised by how often they are used for things they are not really good for. Now, I don’t want to write about how there are &lt;a href=&#34;http://blog.revolutionanalytics.com/2014/10/why-r-is-better-than-excel.html&#34;&gt;better alternatives to spreadsheets&lt;/a&gt;. Instead, I’d like to illustrate how powerful non-spreadsheet tools are by describing a task I completed this week using R.&lt;/p&gt;
+&lt;p&gt; I was recently asked to help an NGO aggregate their contact database. It was not a surprise they needed help aggregating it: it came from dozens of different sources, and had thousands of partially duplicated entries. Entries were identifiable by name or by emails, which were the only unique columns.&lt;/p&gt;
+&lt;p&gt;To give you a better idea, this is what it looked like:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;left&#34;&gt;source&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;email&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;firstName&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;lastName&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;details1&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;details2&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;This&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;mailto:wrw@cs.com&#34;&gt;wrw@cs.com&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Bob&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;ANna&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;That&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;mailto:zam@pk.com&#34;&gt;zam@pk.com&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Steve&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Other&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;mailto:s2@qs.com&#34;&gt;s2@qs.com&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Lacey&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;3&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Other&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;mailto:zam@pk.com&#34;&gt;zam@pk.com&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Steve&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Lacey&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;mailto:zam@pk.com&#34;&gt;zam@pk.com&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Lacey&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Steve&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;5&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Except that I had several columns with details, many emails and other values were invalid, or missing. In short, it was a big hassle that would have taken days of manual work in spreadsheets to sort out, which was what the client originally tried.&lt;/p&gt;
+&lt;p&gt;A more sophisticated consultant/banker spreadsheet user would’ve written some extensive for loop with dozens of conditions and incessant F10 pressing and debugging. This probably would’ve worked but would have been a great waste of time, with a lot of places for errors to creep in.&lt;/p&gt;
+&lt;p&gt;So how did I solve it in R? Almost all of the heavy lifting was done by a single function in the &lt;a href=&#34;https://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html&#34;&gt;dplyr&lt;/a&gt; package. After some data-preprocessing, the hardest problem was solved by the following lines of code:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(stringr)#loading package to deal with strings
+library(dplyr)#loading data wrangling package
+
+#first I write a function to give the most common value in a vector
+# a concrete example in this case, the first name that happens most commonly under a given email
+mstcmn&amp;lt;-function(x){
+  x&amp;lt;-names(sort(table(as.character(x)),decreasing=TRUE)[1])
+  if (is.null(x)){
+    return(NA)
+  }
+  return(x)
+}
+
+#then I write a function to aggregate all other unique strings
+aggr&amp;lt;-function(x){
+  x&amp;lt;-toString(na.omit(x))
+  x&amp;lt;-str_split_fixed(x,&amp;quot;,&amp;quot;,(str_count(x,&amp;quot;,&amp;quot;)+1))
+  x&amp;lt;-trim(x)
+  x&amp;lt;-unique(as.list(x))
+  return(toString(unlist(x)))
+}
+
+
+#and most of the magic happens here: the C++ code under dplyr&#39;s hood rapidly and efficienly aggregates the information needed 
+newdf&amp;lt;-olddf %&amp;gt;% group_by(email) %&amp;gt;% summarise(source = aggr(source),
+                                              first  = mstcmn(first_name),
+                                              last  = mstcmn(last_name),
+                                              details1 = aggr(details1),
+                                              details2 = aggr(details2))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This was followed by a few lines of code to capitalise all relevant values, make things pretty. And voila:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;left&#34;&gt;source&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;email&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;firstName&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;lastName&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;details1&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;details2&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;This&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;mailto:wrw@cs.com&#34;&gt;wrw@cs.com&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Bob&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Anna&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;That, Other&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;mailto:zam@pk.com&#34;&gt;zam@pk.com&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Steve&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Lacey&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;2, 4, 5&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;4, 2, 1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Other&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;mailto:s2@qs.com&#34;&gt;s2@qs.com&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;3&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;I also recreated people’s names based on their emails if their names were missing, as most professional emails in the format: &lt;a href=&#34;mailto:firstname.lastname@email.com&#34;&gt;firstname.lastname@email.com&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Then I used the &lt;a href=&#34;https://cran.r-project.org/web/packages/genderizeR/genderizeR.pdf&#34;&gt;genderizeR&lt;/a&gt; package to add a column with people&#39;s titles: Mr or Ms based on their name.&lt;/p&gt;
+&lt;p&gt;Try doing this on a spreadsheet. I guess the main argument of this post is: don&#39;t use spreadsheets for more than what they are for.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
