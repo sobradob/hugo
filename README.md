@@ -1,2 +1,0 @@
-# hugo
-Hugo website stuff

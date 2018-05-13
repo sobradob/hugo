@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Maps on Boaz Sobrado&#39;s Website</title>
+    <link>http://boazsobrado.com/categories/maps/</link>
+    <description>Recent content in Maps on Boaz Sobrado&#39;s Website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 05 Nov 2015 11:36:16 +0100</lastBuildDate>
+    
+	<atom:link href="http://boazsobrado.com/categories/maps/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Using Google Maps API: Mol Bubi Competition</title>
+      <link>http://boazsobrado.com/blog/2015/11/05/using-google-maps-api-mol-bubi-competition/</link>
+      <pubDate>Thu, 05 Nov 2015 11:36:16 +0100</pubDate>
+      
+      <guid>http://boazsobrado.com/blog/2015/11/05/using-google-maps-api-mol-bubi-competition/</guid>
+      <description>A few friends and I are involved in the Budapest public bicycle data science competition. As of right now we are in the top ten, although in all honesty, it hasn&amp;rsquo;t really started yet. We signed a non-disclosure agreement, so I cannot really share any cool details. What I can share however, is the function I wrote in R to get calculate the distances and duration of bike trips using Google Maps&amp;rsquo; API.</description>
+    </item>
+    
+  </channel>
+</rss>
